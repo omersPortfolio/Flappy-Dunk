@@ -7,21 +7,20 @@ public sealed class ScoreManager : MonoBehaviour
 
     [SerializeField] int swishScoreBonus = 2;
 
-    private void OnEnable()
+    void Start()
     {
-        EventHandler.ScoreAddedEvent += OnAddScore;
+        UIManager.Instance.scoreText.text = "0";
     }
 
-    private void OnDisable()
-    {
-        EventHandler.ScoreAddedEvent -= OnAddScore;
-    }
+    void OnEnable() => EventHandler.ScoreAddedEvent += OnAddScore;
+    void OnDisable() => EventHandler.ScoreAddedEvent -= OnAddScore;
 
     void Update()
     {
 #if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.Q))
         {
+            Debug.Log("Q pressed");
             PlayerPrefs.DeleteAll();
             UIManager.Instance.highScoreText.text = "High Score: " + PlayerPrefs.GetInt(Strings.strHighScore).ToString();
         }
