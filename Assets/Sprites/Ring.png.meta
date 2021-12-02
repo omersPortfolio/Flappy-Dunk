@@ -4,10 +4,10 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 8446849018051096198
-    second: hoop_0
+    second: TopRing
   - first:
       213: -2240474109430859735
-    second: hoop_1
+    second: BottomRing
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hoop_0
+      name: TopRing
       rect:
         serializedVersion: 2
         x: 0
@@ -118,7 +118,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hoop_1
+      name: BottomRing
       rect:
         serializedVersion: 2
         x: 0
